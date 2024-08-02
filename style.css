@@ -25,58 +25,110 @@ a {
     color: var(--primary-color);
 }
 
+/* -------------------START HEADER------------ */
+
 .header-main {
-    height: 100vh;
-    background-image: url(images/background/hero-bg.jpg);
+    height: 400px;
+    /* background-image: url(images/background/hero-bg.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 
- .header-main .background { 
-     position: absolute; 
-     width: 100%; 
+.header-main .background {
+    width: 100%;
+    height: 100%;
+}
+
+/* .header-main .container {
+    width: 100%;
+    height: 100%;
+} */
+.header-main__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #ffffff; */
+
+}
+
+/* .header-main .background { 
+    position: absolute; 
+    width: 100%; 
      height: 100%; 
      top: 0; 
      background-color: var(--primary-color); 
      opacity: .6; 
-} 
+     }  */
 
-.header-main .header-main__wrapper .header-main__menu a{
+/* .background::before {
+    content: "";
+    background:
+        color-mix(in srgb, var(--primary-color), transparent 30%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+} */
+.background img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: cover;
+    position: center;
+    z-index: -1;
+    opacity: 1;
+}
+
+.header-main__menu {
+    margin-top: 10px;
+}
+
+.header-main .header-main__wrapper .header-main__menu a {
     color: var(--default-color);
     font-family: var(--nav-font);
     font-size: 2rem;
+    padding: 5px 10px;
+    z-index: 3;
 }
-.header-main .header-main__wrapper .header-main__menu a span{
+
+
+
+.header-main .header-main__wrapper .header-main__menu a span {
     color: var(--secondary-color);
     font-family: var(--nav-font);
     font-size: 4rem;
 }
 
 .header-main__menu .navbar ul {
-gap:20px
+    gap: 20px;
+    z-index: 3;
 }
 
-.header-main__menu .navbar ul li i{
+.header-main__menu .navbar ul li i {
     position: absolute;
-    top:17px;
+    top: 17px;
+    right: 25px;
     vertical-align: middle;
     padding-right: 10px;
 }
 
-.header-main__menu .navbar ul li a{
+.header-main__menu .navbar ul li a {
     transition: var(--transition-main);
 }
 
-.header-main__menu .navbar ul li a:hover{
+.header-main__menu .navbar ul li a:hover {
     color: var(--secondary-color);
 }
 
 
-.header-main__menu .navbar ul li ul{
+.header-main__menu .navbar ul li ul {
     display: none;
 }
 
-.header-main__menu .navbar ul li:hover ul{
+.header-main__menu .navbar ul li:hover ul {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -89,27 +141,171 @@ gap:20px
 }
 
 
-.header-main__menu .navbar ul li:hover ul li a{
+.header-main__menu .navbar ul li:hover ul li a {
     color: var(--primary-color);
     font-size: 1.2rem;
     font-family: var(--nav-font);
 }
 
-.header-main__menu .navbar ul li ul li a i{
+.header-main__menu .navbar ul li ul li a i {
     position: absolute;
-    top:84px;
+    top: 84px;
     vertical-align: middle;
     padding-left: 6px;
 }
 
 .header-main__menu .navbar ul li ul li a {
     transition: var(--transition-main);
-    
 }
-
 
 .header-main__menu .navbar ul li ul li a:hover {
     color: var(--secondary-color);
 }
 
+.header-main__menu .navbar ul li ul li ul li {
+    display: none;
+}
 
+.header-main__menu .navbar ul li ul li ul:hover li {
+    display: block;
+    color: var(--secondary-color);
+}
+
+.header-main__mobile-menu .nav-mobile-menu {
+
+    position: relative;
+    top:-40px;
+    right: -342px;
+    width: 100%;
+    height: 100vh;
+    transition: all .3s ease-in-out;
+    transition-delay: .6s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--default-color);
+    opacity: .6;
+    z-index: -1;
+    display: none;
+}
+
+.header-main__mobile-menu .fa-bars {
+    color: var(--default-color);
+    font-size: 2rem;
+    padding: 5px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in;
+}
+
+.menu-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    display: none;
+}
+
+.menu-close .fa-times{
+    width: 30px;
+    height: 30px;
+    top: 40px;
+    right: 40px;
+    font-size: 2rem;
+    padding-top: 5px;
+    z-index: 2;
+    background-color: var(--primary-color);
+    color: var(--default-color);
+}
+
+.menu-close:hover {
+    color: var(--secondary-color);
+}
+
+.nav-mobile-menu ul li a {
+    font-size: 20rem;
+    font-family: var(--nav-font);
+    color: var(--secondary-color);
+}
+
+.nav-mobile-menu ul li:hover a{
+    color: var(--secondary-color);
+    background-color: #ffc451;
+}
+
+.active {
+    color: var(--secondary-color);
+    /* background-color: #ffc451; */
+}
+
+.header-main__Center-content h2 {
+    color: var(--default-color);
+    width: 430px;
+    text-wrap: wrap;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 45px;
+    text-align: center;
+}
+
+.header-main__Center-content h2 span {
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--secondary-color);
+}
+
+.header-main__Center-content p {
+
+    color: var(--default-color);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.header-main__Button-content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-evenly;
+
+}
+
+.header-main__Button-content .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--default-color);
+    border-radius: 3px;
+    width: 130px;
+    height: 110px;
+    margin: 10px 15px;
+}
+
+.header-main__Button-content .item i {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--default-color);
+}
+
+.header-main__Button-content .item a {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--default-color);
+    text-align: center;
+}
+
+
+
+/* -------------------END HEADER------------ */
