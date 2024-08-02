@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --primary-color: #212529;
+    --secondary-color: #ffc451;
+    --default-color: #ffffff;
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+    --transition-main: all .5s ease-in-out;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.header-main {
+    height: 100vh;
+    background-image: url(images/background/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+ .header-main .background { 
+     position: absolute; 
+     width: 100%; 
+     height: 100%; 
+     top: 0; 
+     background-color: var(--primary-color); 
+     opacity: .6; 
+} 
+
+.header-main .header-main__wrapper .header-main__menu a{
+    color: var(--default-color);
+    font-family: var(--nav-font);
+    font-size: 2rem;
+}
+.header-main .header-main__wrapper .header-main__menu a span{
+    color: var(--secondary-color);
+    font-family: var(--nav-font);
+    font-size: 4rem;
+}
+
+.header-main__menu .navbar ul {
+gap:20px
+}
+
+.header-main__menu .navbar ul li i{
+    position: absolute;
+    top:17px;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.header-main__menu .navbar ul li a{
+    transition: var(--transition-main);
+}
+
+.header-main__menu .navbar ul li a:hover{
+    color: var(--secondary-color);
+}
+
+
+.header-main__menu .navbar ul li ul{
+    display: none;
+}
+
+.header-main__menu .navbar ul li:hover ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+    position: absolute;
+    width: 160px;
+    background-color: var(--default-color);
+    border-radius: 6px;
+}
+
+
+.header-main__menu .navbar ul li:hover ul li a{
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-family: var(--nav-font);
+}
+
+.header-main__menu .navbar ul li ul li a i{
+    position: absolute;
+    top:84px;
+    vertical-align: middle;
+    padding-left: 6px;
+}
+
+.header-main__menu .navbar ul li ul li a {
+    transition: var(--transition-main);
+    
+}
+
+
+.header-main__menu .navbar ul li ul li a:hover {
+    color: var(--secondary-color);
+}
+
+
