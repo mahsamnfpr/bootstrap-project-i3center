@@ -294,8 +294,8 @@ a {
 }
 
 .header-main__Button-content .item i {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.5rem;
+    font-weight: 300px;
     color: var(--default-color);
 }
 
@@ -304,6 +304,8 @@ a {
     font-weight: 500;
     color: var(--default-color);
     text-align: center;
+    line-height: 1;
+    padding-top: 8px;
 }
 
 
